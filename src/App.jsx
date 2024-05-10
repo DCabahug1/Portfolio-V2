@@ -33,6 +33,7 @@ function App() {
     },
   ]);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
   const [projectsPerView, setProjectsPerView] = useState(1);
 
   // Listen for viewport width changes
@@ -42,8 +43,7 @@ function App() {
       if (projects.length >= 3) {
         setProjectsPerView(3);
         document.querySelector(".swiper").style.maxWidth = "1290px";
-        document.querySelector(".swiper-wrapper").style.maxWidth =
-          "1290px";
+        document.querySelector(".swiper-wrapper").style.maxWidth = "1290px";
         const swiperSlide = document.querySelector(".swiper-slide");
 
         if (swiperSlide) {
@@ -58,6 +58,21 @@ function App() {
     }
   }, [viewportWidth]);
 
+  // Listen for viewport height changes
+  useEffect(() => {
+    const rotateAlert = document.getElementById("rotate-alert");
+
+    if (viewportHeight < 500) {
+      rotateAlert.style.display = "flex";
+      rotateAlert.style.opacity = "1";
+    } else {
+      rotateAlert.style.opacity = "0";
+      setTimeout(() => {
+        rotateAlert.style.display = "none";
+      }, 400);
+    }
+  }, [viewportHeight]);
+
   // On mount
   useEffect(() => {
     // Event listeners
@@ -67,6 +82,7 @@ function App() {
     // Update viewport width on resize
     window.addEventListener("resize", () => {
       setViewportWidth(window.innerWidth);
+      setViewportHeight(window.innerHeight);
     });
 
     app.addEventListener("scroll", () => {
@@ -107,6 +123,9 @@ function App() {
 
   return (
     <div id="app">
+      <div id="rotate-alert">
+        <img src="/assets/RotateDevice.png" alt="" />
+      </div>
       {/* Mobile intro & about */}
       <div className="content-container mobile" id="intro-container">
         <img src="/assets/Portrait.png" alt="" id="intro-photo" />
