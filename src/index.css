@@ -2,4 +2,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  height: 100svh;
+  width: 100svw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100svh;
+  width: 100svw;
+  background: rgb(31, 18, 48);
+  background: radial-gradient(circle at bottom, rgba(31, 18, 48, 1) 0%, rgba(16, 6, 20, 1) 100%);
 }

@@ -1,0 +1,139 @@
+#app {
+  height: 100svh;
+  width: 100svw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+}
+
+.content-container {
+  height: 100svh;
+  width: 100svw;
+  position: relative;
+  border: 5px solid white;
+}
+
+#intro-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#intro-photo {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+#intro-name {
+  color: white;
+  font-size: 40px;
+}
+
+#intro-major {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 25px;
+  font-weight: 500;
+}
+
+#scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 70px;
+  width: 70px;
+}
+
+#scroll-indicator img {
+  height: 100%;
+  width: 100%;
+  animation: hoverbounce alternate 2s infinite ease-in-out;
+}
+
+@keyframes hoverbounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+#mobile-about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 20px;
+  height: min-content;
+}
+
+#about-title {
+  color: white;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+#about-text {
+  color: rgba(255,255,255,0.8);
+  font-size: 20px;
+  text-align: center;
+  font-weight: 300;
+  line-height: 35px;
+  max-width: 650px;
+}
+
+#projects-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#projects-title {
+  color: white;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+#projects-collection {
+  position: relative;
+  background-color: red;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: inherit;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50px;
+  width: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#project-slider-button-left {
+  left: 0;
+}
+
+#project-slider-button-right {
+  right: 0;
+}

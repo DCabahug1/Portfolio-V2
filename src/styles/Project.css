@@ -1,0 +1,9 @@
+.project-container  {
+  height: 350px;
+  min-width: 350px;
+  background-color: blue;
+  border: 5px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
