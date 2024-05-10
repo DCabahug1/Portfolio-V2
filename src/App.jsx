@@ -178,9 +178,9 @@ function App() {
       <div className="content-container mobile" id="mobile-about-container">
         <h2 id="about-title">About Me</h2>
         <p id="about-text">
-          As a <span> Computer Science major</span> at California State
-          University, Northridge, I bring a dynamic skill set including
-          proficiency in{" "}
+          As a <span> Computer Science major</span> at{" "}
+          <span>California State University, Northridge</span>, I bring a
+          dynamic skill set including <span>proficiency</span> in{" "}
           <span>Java, JavaScript, React JS, HTML, CSS, LuaU, and Python.</span>{" "}
           My <span>passion for technology</span> and coding drives my continual
           pursuit of innovative solutions and learning. I am actively seeking{" "}
