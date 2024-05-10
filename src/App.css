@@ -12,6 +12,7 @@
   width: 100svw;
   position: relative;
   /* border: 5px solid white; */
+  transition: 0.4s ease-in-out;
 }
 
 #intro-container {
@@ -76,6 +77,8 @@
   flex-direction: column;
   padding: 100px 20px;
   height: min-content;
+  position: relative;
+  left: 100%;
 }
 
 #about-title {

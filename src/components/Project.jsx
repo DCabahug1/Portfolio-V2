@@ -4,7 +4,7 @@ import "../styles/Project.css";
 function Project(props) {
   return (
     <div className="project-container">
-      <a className="project">
+      <a className="project" href={props.projectURL}>
         <img
           src={props.imgURL}
           alt=""

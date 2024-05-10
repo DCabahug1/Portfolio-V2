@@ -5,7 +5,7 @@ import { Pagination } from "swiper/modules";
 
 import "./App.css";
 // Import Swiper Styles
-import './styles/Swiper.css';
+import "./styles/Swiper.css";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -17,6 +17,7 @@ function App() {
       imgURL: "/assets/Project Imgs/DailyPlanner.png",
       title: "To-Do List",
       content: ["HTML", "CSS", "JavaScript", "React"],
+      projectURL: "https://dcabahug-dailyplanner.netlify.app/my-planner",
     },
     {
       imgURL: "",
@@ -30,13 +31,31 @@ function App() {
     // Event listeners
     // Listen for app scroll
     const app = document.getElementById("app");
+    let viewportHeight = window.innerHeight;
+    console.log("Viewport Height: " + viewportHeight);
+
+    // Update viewport height on resize
+    window.addEventListener("resize", () => {
+      viewportHeight = window.innerHeight;
+      console.log("Viewport Height: " + viewportHeight);
+    });
+
     app.addEventListener("scroll", () => {
+      console.log(app.scrollTop);
+
+      // Adjust scroll indicator
       const scrollIndicator = document.getElementById("scroll-indicator");
+      let scrollIndOpacity = 1 - app.scrollTop / 500;
 
-      let scrollIndOpacity = 1 - app.scrollTop / 200;
+      scrollIndicator.style.opacity = scrollIndOpacity;
 
-      if (scrollIndOpacity >= 0) {
-        scrollIndicator.style.opacity = scrollIndOpacity;
+      // Slide in animation
+      if (app.scrollTop >= 200) {
+        const aboutContainer = document.getElementById(
+          "mobile-about-container"
+        );
+
+        aboutContainer.style.left = "0";
       }
     });
   }, []);
@@ -44,11 +63,11 @@ function App() {
   return (
     <div id="app">
       <div className="content-container mobile" id="intro-container">
-        <img src="src\assets\Portrait.png" alt="" id="intro-photo" />
+        <img src="/assets/Portrait.png" alt="" id="intro-photo" />
         <h1 id="intro-name">Duane Cabahug</h1>
         <h2 id="intro-major">Computer Science</h2>
         <div id="scroll-indicator">
-          <img src="src\assets\Scroll indicator.png" alt="" />
+          <img src="/assets/Scroll indicator.png" alt="" />
         </div>
       </div>
       <div className="content-container mobile" id="mobile-about-container">
@@ -71,19 +90,20 @@ function App() {
           modules={[Pagination]}
           className="mySwiper"
         >
-              {projects.map((project, i) => {
-                return (
-                  <SwiperSlide key={"project_" + i}>
-                    <Project
-                      imgURL={project.imgURL}
-                      title={project.title}
-                      content={project.content}
-                    />
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-          </div>
+          {projects.map((project, i) => {
+            return (
+              <SwiperSlide key={"project_" + i}>
+                <Project
+                  imgURL={project.imgURL}
+                  title={project.title}
+                  content={project.content}
+                  projectURL={project.projectURL}
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
     </div>
   );
 }
