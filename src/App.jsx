@@ -83,6 +83,38 @@ function App() {
 
   // On mount
   useEffect(() => {
+    // Mobile intro animation
+    const introPhoto = document.getElementById("intro-photo");
+    const introName = document.getElementById("intro-name");
+    const introMajor = document.getElementById("intro-major");
+    const scrollIndicator = document.querySelector(".scroll-indicator");
+
+    setTimeout(() => {
+      introPhoto.style.opacity = "1";
+      introPhoto.style.top = "0";
+
+      introName.style.opacity = "1";
+      introName.style.top = "0";
+
+      introMajor.style.opacity = "1";
+      introMajor.style.top = "0";
+
+      setTimeout(() => {
+        scrollIndicator.style.opacity = "1";
+      }, 1000);
+    }, 1000);
+    // Desktop intro animation
+    const introNameAndMajor = document.getElementById("intro-name-and-major");
+    const introText = document.getElementById("intro-text");
+
+    setTimeout(() => {
+      introNameAndMajor.style.opacity = "1";
+      introNameAndMajor.style.right = "0";
+
+      introText.style.opacity = "1";
+      introText.style.left = "0";
+    }, 1000);
+
     // Event listeners
     // Listen for app scroll
     const app = document.getElementById("app");
@@ -150,8 +182,12 @@ function App() {
           University, Northridge, I bring a dynamic skill set including
           proficiency in{" "}
           <span>Java, JavaScript, React JS, HTML, CSS, LuaU, and Python.</span>{" "}
-          My passion for technology and coding drives my continual pursuit of
-          innovative solutions and learning.
+          My <span>passion for technology</span> and coding drives my continual
+          pursuit of innovative solutions and learning. I am actively seeking{" "}
+          <span>internships</span>
+          to gain hands-on experience, apply my knowledge in{" "}
+          <span>real-world projects</span>, and contribute to impactful{" "}
+          <span>technological advancements</span>.
         </p>
       </div>
       {/* Desktop intro & about */}
@@ -162,12 +198,16 @@ function App() {
           <h2>Computer Science</h2>
         </div>
         <p id="intro-text">
-          As a <span> Computer Science major</span> at California State
-          University, Northridge, I bring a dynamic skill set including
-          proficiency in{" "}
+          As a <span> Computer Science major</span> at{" "}
+          <span>California State University, Northridge</span>, I bring a
+          dynamic skill set including <span>proficiency</span> in{" "}
           <span>Java, JavaScript, React JS, HTML, CSS, LuaU, and Python.</span>{" "}
-          My passion for technology and coding drives my continual pursuit of
-          innovative solutions and learning.
+          My <span>passion for technology</span> and coding drives my continual
+          pursuit of innovative solutions and learning. I am actively seeking{" "}
+          <span>internships</span>
+          to gain hands-on experience, apply my knowledge in{" "}
+          <span>real-world projects</span>, and contribute to impactful{" "}
+          <span>technological advancements</span>.
         </p>
         <div className="scroll-indicator">
           <img src="/assets/Scroll indicator.png" alt="" />
