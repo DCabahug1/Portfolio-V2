@@ -63,13 +63,21 @@ function App() {
     const rotateAlert = document.getElementById("rotate-alert");
 
     if (viewportHeight < 500) {
+      // Disable scroll
+      document.querySelector("#app").style.overflowY = "hidden";
+      document.querySelector("body").style.backgroundColor = "rgb(20,20,20)";
       rotateAlert.style.display = "flex";
       rotateAlert.style.opacity = "1";
     } else {
-      rotateAlert.style.opacity = "0";
       setTimeout(() => {
-        rotateAlert.style.display = "none";
-      }, 400);
+        document.querySelector("#app").style.overflowY = "scroll";
+        document.querySelector("body").style.backgroundColor =
+          "rgba(16, 6, 20, 1)";
+        rotateAlert.style.opacity = "0";
+        setTimeout(() => {
+          rotateAlert.style.display = "none";
+        }, 400);
+      }, 1000);
     }
   }, [viewportHeight]);
 
