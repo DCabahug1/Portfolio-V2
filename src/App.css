@@ -192,7 +192,8 @@
   margin-bottom: 10px;
   transition: 0.7s ease-out;
   position: relative;
-  left: 100%;
+  left: 50%;
+  opacity: 0;
 }
 
 #about-text {
@@ -204,7 +205,8 @@
   max-width: 650px;
   transition: 0.7s ease-out;
   position: relative;
-  right: 100%;
+  right: 50%;
+  opacity: 0;
 }
 
 #about-text span {
@@ -223,7 +225,7 @@
   transition: 0.7s ease-out;
   opacity: 0;
   position: relative;
-  top: 100%;
+  top: 50%;
 }
 
 #swiper-container {

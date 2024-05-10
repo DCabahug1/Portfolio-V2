@@ -19,18 +19,6 @@ function App() {
       content: ["HTML", "CSS", "JavaScript", "React"],
       projectURL: "https://dcabahug-dailyplanner.netlify.app/my-planner",
     },
-    {
-      imgURL: "/assets/Project Imgs/DailyPlanner.png",
-      title: "To-Do List",
-      content: ["HTML", "CSS", "JavaScript", "React"],
-      projectURL: "https://dcabahug-dailyplanner.netlify.app/my-planner",
-    },
-    {
-      imgURL: "/assets/Project Imgs/DailyPlanner.png",
-      title: "To-Do List",
-      content: ["HTML", "CSS", "JavaScript", "React"],
-      projectURL: "https://dcabahug-dailyplanner.netlify.app/my-planner",
-    },
   ]);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
@@ -88,20 +76,22 @@ function App() {
     const introName = document.getElementById("intro-name");
     const introMajor = document.getElementById("intro-major");
     const scrollIndicator = document.querySelector(".scroll-indicator");
+    const scrollIndicatorDesktop = document.querySelector("#scroll-indicator-desktop");
 
     setTimeout(() => {
-      introPhoto.style.opacity = "1";
-      introPhoto.style.top = "0";
-
       introName.style.opacity = "1";
       introName.style.top = "0";
 
       introMajor.style.opacity = "1";
       introMajor.style.top = "0";
 
+      introPhoto.style.opacity = "1";
+      introPhoto.style.top = "0";
+
       setTimeout(() => {
         scrollIndicator.style.opacity = "1";
-      }, 1000);
+        scrollIndicatorDesktop.style.opacity = "1";
+      }, 500);
     }, 1000);
     // Desktop intro animation
     const introNameAndMajor = document.getElementById("intro-name-and-major");
@@ -125,16 +115,10 @@ function App() {
       setViewportHeight(window.innerHeight);
     });
 
+    // Scroll animations
     app.addEventListener("scroll", () => {
-      console.log(app.scrollTop);
-
       // Adjust scroll indicator
       const scrollIndicators = document.querySelectorAll(".scroll-indicator");
-      let scrollIndOpacity = 1 - app.scrollTop / 500;
-
-      scrollIndicators.forEach((scrollInd) => {
-        scrollInd.style.opacity = scrollIndOpacity;
-      });
 
       // Slide in animation
       if (app.scrollTop >= 200) {
@@ -143,6 +127,14 @@ function App() {
 
         aboutTitle.style.left = "0";
         aboutText.style.right = "0";
+
+        aboutTitle.style.opacity = "1";
+        aboutText.style.opacity = "1";
+
+        // Remove scroll indicators
+        scrollIndicators.forEach((scrollInd) => {
+          scrollInd.style.opacity = 0;
+        });
       }
 
       if (app.scrollTop >= 100 && viewportWidth >= 1200) {
@@ -182,18 +174,15 @@ function App() {
           <span>California State University, Northridge</span>, I bring a
           dynamic skill set including <span>proficiency</span> in{" "}
           <span>Java, JavaScript, React JS, HTML, CSS, LuaU, and Python.</span>{" "}
-          My <span>passion for technology</span> and coding drives my continual
-          pursuit of innovative solutions and learning. I am actively seeking{" "}
-          <span>internships</span>
-          to gain hands-on experience, apply my knowledge in{" "}
-          <span>real-world projects</span>, and contribute to impactful{" "}
-          <span>technological advancements</span>.
+          I am actively seeking <span>internships</span> to gain hands-on
+          experience, apply my knowledge in <span>real-world projects</span>,
+          and contribute to impactful <span>technological advancements</span>.
         </p>
       </div>
       {/* Desktop intro & about */}
       <div className="content-container" id="intro-desktop-container">
         <div id="intro-name-and-major">
-          <img src="/assets/Portrait.png" alt="" id="intro-photo" />
+          <img src="/assets/Portrait.png" alt="" />
           <h1>Duane Cabahug</h1>
           <h2>Computer Science</h2>
         </div>
@@ -202,14 +191,13 @@ function App() {
           <span>California State University, Northridge</span>, I bring a
           dynamic skill set including <span>proficiency</span> in{" "}
           <span>Java, JavaScript, React JS, HTML, CSS, LuaU, and Python.</span>{" "}
-          My <span>passion for technology</span> and coding drives my continual
-          pursuit of innovative solutions and learning. I am actively seeking{" "}
-          <span>internships</span>
+          I am actively seeking <span>internships</span>
+          {""}
           to gain hands-on experience, apply my knowledge in{" "}
           <span>real-world projects</span>, and contribute to impactful{" "}
           <span>technological advancements</span>.
         </p>
-        <div className="scroll-indicator">
+        <div className="scroll-indicator" id="scroll-indicator-desktop">
           <img src="/assets/Scroll indicator.png" alt="" />
         </div>
       </div>
