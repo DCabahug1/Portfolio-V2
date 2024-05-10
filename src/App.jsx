@@ -39,6 +39,7 @@ function App() {
     });
 
     app.addEventListener("scroll", () => {
+      console.log(app.scrollTop);
 
       // Adjust scroll indicator
       const scrollIndicator = document.getElementById("scroll-indicator");
@@ -53,6 +54,14 @@ function App() {
 
         aboutTitle.style.left = "0";
         aboutText.style.right = "0";
+      }
+
+      if (app.scrollTop >= 600) {
+        const projectsContainer = document.getElementById("projects-container");
+
+        projectsContainer.style.opacity = "1";
+        projectsContainer.style.top = "0";
+        
       }
     });
   }, []);
@@ -70,8 +79,9 @@ function App() {
       <div className="content-container mobile" id="mobile-about-container">
         <h2 id="about-title">About Me</h2>
         <p id="about-text">
-          As a <span> Computer Science major</span> at California
-          State University, Northridge, I bring a dynamic skill set including proficiency in{" "}
+          As a <span> Computer Science major</span> at California State
+          University, Northridge, I bring a dynamic skill set including
+          proficiency in{" "}
           <span>Java, JavaScript, React JS, HTML, CSS, LuaU, and Python.</span>{" "}
           My passion for technology and coding drives my continual pursuit of
           innovative solutions and learning.
@@ -101,6 +111,31 @@ function App() {
             );
           })}
         </Swiper>
+      </div>
+      <div className="content-container" id="links-container">
+        <div id="links-buttons-container">
+          <a
+            id="github-button"
+            className="links-button"
+            href="https://github.com/DCabahug1"
+          >
+            <img src="/assets/GitHub.png" alt="" />
+          </a>
+          <a
+            id="linkedin-button"
+            className="links-button"
+            href="https://linkedin.com/in/duane-cabahug"
+          >
+            <img src="/assets/LinkedIn.png" alt="" />
+          </a>
+          <a
+            id="email-button"
+            className="links-button"
+            href="mailto:duanecabahug6@gmail.com"
+          >
+            <img src="/assets/Email.png" alt="" />
+          </a>
+        </div>
       </div>
     </div>
   );

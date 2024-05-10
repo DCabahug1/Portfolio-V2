@@ -90,7 +90,7 @@
 }
 
 #about-text {
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 20px;
   text-align: center;
   font-weight: 300;
@@ -103,7 +103,7 @@
 
 #about-text span {
   font-weight: 500;
-  color: rgba(255,255,255,1)
+  color: rgba(255, 255, 255, 1)
 }
 
 #projects-container {
@@ -114,6 +114,10 @@
   height: min-content;
   width: 100%;
   padding: 20px;
+  transition: 0.7s ease-out;
+  opacity: 0;
+  position: relative;
+  top: 100%;
 }
 
 #projects-title {
@@ -128,4 +132,45 @@
   width: 350px;
   height: 350px;
   display: flex;
+}
+
+#links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: min-content;
+  width: 100%;
+}
+
+#links-buttons-container {
+  height: 120px;
+  width: 100%;
+  min-width: 375px;
+  max-width: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.links-button {
+  height: 60px;
+  width: 60px;
+  border: none;
+  /* border-radius: 50%; */
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.4s;
+  opacity: 0.6;
+  background-color: transparent;
+}
+
+.links-button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.links-button img {
+  height: 100%;
+  width: 100%;
 }
