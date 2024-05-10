@@ -1,6 +1,13 @@
 .swiper {
-  width: 100%;
+  width: 100svw;
   height: 400px;
+  /* background-color: red; */
+}
+
+@media screen and (min-width: 1200px) {
+  .swiper {
+    height: 550px;
+  }
 }
 
 .swiper-slide {
@@ -13,6 +20,8 @@
   align-items: center;
 }
 
+
+
 .swiper-slide img {
   display: block;
   width: 100%;
@@ -23,4 +32,8 @@
 /* Important */
 .swiper-pagination-bullet {
   background-color: white !important;
+}
+
+.swiper-wrapper {
+  /* justify-content: center; */
 }

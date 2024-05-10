@@ -15,11 +15,84 @@
   transition: 0.4s ease-in-out;
 }
 
+@media screen and (min-width: 1200px) {
+  .mobile {
+    display: none !important;
+  }
+
+  #intro-desktop-container {
+    display: flex !important;
+  }
+}
+
 #intro-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+
+#intro-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#intro-major {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 25px;
+  font-weight: 500;
+}
+
+/* Desktop */
+
+#intro-desktop-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+}
+
+#intro-name-and-major {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+#intro-name-and-major img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+#intro-name-and-major h1 {
+  font-size: clamp(50px, 5svw, 75px);
+  color: white;
+}
+
+#intro-name-and-major h2 {
+  font-size: clamp(30px, 3svw, 45px);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+}
+
+#intro-text {
+  width: 50%;
+  max-width: 800px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 30px;
+  font-weight: 200;
+  line-height: 55px;
+}
+
+#intro-text span {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
 }
 
 #intro-photo {
@@ -34,13 +107,8 @@
   font-size: 40px;
 }
 
-#intro-major {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 25px;
-  font-weight: 500;
-}
 
-#scroll-indicator {
+.scroll-indicator {
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -49,7 +117,7 @@
   width: 70px;
 }
 
-#scroll-indicator img {
+.scroll-indicator img {
   height: 100%;
   width: 100%;
   animation: hoverbounce alternate 2s infinite ease-in-out;
@@ -120,18 +188,22 @@
   top: 100%;
 }
 
+#swiper-container {
+  height: 100%;
+  width: 100svw;
+  /* background-color: red; */
+}
+
 #projects-title {
   color: white;
   font-size: 35px;
   margin-bottom: 15px;
 }
 
-#projects-collection {
-  position: relative;
-  background-color: red;
-  width: 350px;
-  height: 350px;
-  display: flex;
+@media screen and (min-width: 1200px) {
+  #projects-title {
+    font-size: 60px;
+  }
 }
 
 #links-container {
@@ -173,4 +245,18 @@
 .links-button img {
   height: 100%;
   width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  #links-buttons-container {
+    height: 150px;
+    width: 100%;
+    min-width: 375px;
+    max-width: 600px;
+  }
+
+  .links-button {
+    height: 100px;
+    width: 100px;
+  }
 }

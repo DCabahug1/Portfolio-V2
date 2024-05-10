@@ -23,6 +23,16 @@
   text-decoration: none;
 }
 
+@media screen and (min-width: 1200px) {
+  .project-container {
+    margin-top: 80px;
+  }
+
+  .project {
+    transform: scale(1.4)
+  }
+}
+
 .project:hover {
   border: solid 2px rgba(255,255,255,0.3);
 }
