@@ -1,9 +1,72 @@
 .project-container  {
-  height: 350px;
-  min-width: 350px;
-  background-color: blue;
-  border: 5px solid white;
+  height: 100%;
+  width: 100%;
+  /* border: solid 5px white; */
+  display: flex;
+  justify-content: center;
+}
+
+.project {
+  height: 360px;
+  min-width: 250px;
+  max-width: 250px;
+  background-color: rgba(0,0,0,0.3);
+  overflow: hidden;
+  border-radius: 10px;
+  border: solid 2px rgba(255,255,255,0.1);
+  outline: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.project:hover {
+  border: solid 2px rgba(255,255,255,0.3);
+}
+
+.project-image {
+  max-height: 150px;
+  width: 100%;
+}
+
+.project-text {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  text-align: left;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 10px;
+}
+
+.project-content-container {
+  height: min-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.project-content {
+  background-color: rgba(0,0,0,0.1);
+  width: min-content;
+  height: 30px;
+  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 5px;
+}
+
+.project-content p {
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+
 }

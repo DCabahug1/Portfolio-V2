@@ -1,16 +1,27 @@
 import React, { useEffect, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+
 import "./App.css";
+// Import Swiper Styles
+import './styles/Swiper.css';
+import "swiper/css";
+import "swiper/css/pagination";
+
 import Project from "./components/Project";
 
 function App() {
   const [projects, setProjects] = useState([
     {
-      imgURL: "",
-      title: "Test1",
+      imgURL: "/assets/Project Imgs/DailyPlanner.png",
+      title: "To-Do List",
+      content: ["HTML", "CSS", "JavaScript", "React"],
     },
     {
       imgURL: "",
-      title: "Test2",
+      title: "ChatLink",
+      content: ["HTML", "CSS", "JavaScript", "React", "Firebase"],
     },
   ]);
 
@@ -51,17 +62,28 @@ function App() {
       </div>
       <div className="content-container" id="projects-container">
         <h2 id="projects-title">Projects</h2>
-        <div id="projects-collection">
-          {/* Projects */}
-          {projects.map((project, index) => (
-            <Project
-              key={"project_" + index}
-              imgURL={project.imgURL}
-              title={project.title}
-            />
-          ))}
-        </div>
-      </div>
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={30}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="mySwiper"
+        >
+              {projects.map((project, i) => {
+                return (
+                  <SwiperSlide key={"project_" + i}>
+                    <Project
+                      imgURL={project.imgURL}
+                      title={project.title}
+                      content={project.content}
+                    />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div>
     </div>
   );
 }
