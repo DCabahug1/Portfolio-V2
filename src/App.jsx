@@ -48,11 +48,11 @@ function App() {
 
       // Slide in animation
       if (app.scrollTop >= 200) {
-        const aboutContainer = document.getElementById(
-          "mobile-about-container"
-        );
+        const aboutTitle = document.getElementById("about-title");
+        const aboutText = document.getElementById("about-text");
 
-        aboutContainer.style.left = "0";
+        aboutTitle.style.left = "0";
+        aboutText.style.right = "0";
       }
     });
   }, []);

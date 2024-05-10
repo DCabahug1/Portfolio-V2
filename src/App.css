@@ -78,13 +78,15 @@
   padding: 100px 20px;
   height: min-content;
   position: relative;
-  left: 100%;
 }
 
 #about-title {
   color: white;
   font-size: 35px;
   margin-bottom: 10px;
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 100%;
 }
 
 #about-text {
@@ -94,6 +96,9 @@
   font-weight: 300;
   line-height: 35px;
   max-width: 650px;
+  transition: 0.4s ease-out;
+  position: relative;
+  right: 100%;
 }
 
 #about-text span {
