@@ -32,16 +32,13 @@ function App() {
     // Listen for app scroll
     const app = document.getElementById("app");
     let viewportHeight = window.innerHeight;
-    console.log("Viewport Height: " + viewportHeight);
 
     // Update viewport height on resize
     window.addEventListener("resize", () => {
       viewportHeight = window.innerHeight;
-      console.log("Viewport Height: " + viewportHeight);
     });
 
     app.addEventListener("scroll", () => {
-      console.log(app.scrollTop);
 
       // Adjust scroll indicator
       const scrollIndicator = document.getElementById("scroll-indicator");
@@ -73,10 +70,11 @@ function App() {
       <div className="content-container mobile" id="mobile-about-container">
         <h2 id="about-title">About Me</h2>
         <p id="about-text">
-          I am a Computer Science student at California State University,
-          Northridge. I am passionate about technology and its applications in
-          the real world. I am currently seeking internships and opportunities
-          to grow my skills and knowledge in the field of software development.
+          As a <span> Computer Science major</span> at California
+          State University, Northridge, I bring a dynamic skill set including proficiency in{" "}
+          <span>Java, JavaScript, React JS, HTML, CSS, LuaU, and Python.</span>{" "}
+          My passion for technology and coding drives my continual pursuit of
+          innovative solutions and learning.
         </p>
       </div>
       <div className="content-container" id="projects-container">

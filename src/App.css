@@ -96,6 +96,11 @@
   max-width: 650px;
 }
 
+#about-text span {
+  font-weight: 500;
+  color: rgba(255,255,255,1)
+}
+
 #projects-container {
   display: flex;
   justify-content: center;
