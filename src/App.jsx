@@ -76,7 +76,9 @@ function App() {
     const introName = document.getElementById("intro-name");
     const introMajor = document.getElementById("intro-major");
     const scrollIndicator = document.querySelector(".scroll-indicator");
-    const scrollIndicatorDesktop = document.querySelector("#scroll-indicator-desktop");
+    const scrollIndicatorDesktop = document.querySelector(
+      "#scroll-indicator-desktop"
+    );
 
     setTimeout(() => {
       introName.style.opacity = "1";
@@ -192,7 +194,7 @@ function App() {
           dynamic skill set including <span>proficiency</span> in{" "}
           <span>Java, JavaScript, React JS, HTML, CSS, LuaU, and Python.</span>{" "}
           I am actively seeking <span>internships</span>
-          {""}
+          {" "}
           to gain hands-on experience, apply my knowledge in{" "}
           <span>real-world projects</span>, and contribute to impactful{" "}
           <span>technological advancements</span>.
