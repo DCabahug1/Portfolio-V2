@@ -17,7 +17,7 @@ function App() {
       imgURL: "/assets/Project Imgs/DailyPlanner.png",
       title: "To-Do List",
       content: ["HTML", "CSS", "JavaScript", "React"],
-      projectURL: "https://dcabahug-dailyplanner.netlify.app/my-planner",
+      projectURL: "https://dcabahug-to-do-list.netlify.app/",
     },
   ]);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
