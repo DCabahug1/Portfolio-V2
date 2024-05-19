@@ -120,7 +120,7 @@ function App() {
       // Adjust scroll indicator
       const scrollIndicators = document.querySelectorAll(".scroll-indicator");
 
-      // Slide in animation
+      // About slide in animation
       if (app.scrollTop >= 200) {
         const aboutTitle = document.getElementById("about-title");
         const aboutText = document.getElementById("about-text");
@@ -137,13 +137,13 @@ function App() {
         });
       }
 
-      if (app.scrollTop >= 100 && viewportWidth >= 1200) {
+      if (app.scrollTop >= 300 && viewportWidth >= 1200) {
         // Desktop
         const projectsContainer = document.getElementById("projects-container");
 
         projectsContainer.style.opacity = "1";
         projectsContainer.style.top = "0";
-      } else if (app.scrollTop >= 600 && viewportWidth < 1200) {
+      } else if (app.scrollTop >= 800 && viewportWidth < 1200) {
         // Mobile
         const projectsContainer = document.getElementById("projects-container");
 
