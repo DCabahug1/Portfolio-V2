@@ -19,7 +19,14 @@ function App() {
       content: ["HTML", "CSS", "JavaScript", "React"],
       projectURL: "https://dcabahug-to-do-list.netlify.app/",
     },
+    {
+      imgURL: "/assets/Project Imgs/ChatLink.png",
+      title: "ChatLink",
+      content: ["HTML", "CSS", "JavaScript", "React"],
+      projectURL: "https://dcabahug1-chatlinkv2.netlify.app",
+    },
   ]);
+
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
   const [projectsPerView, setProjectsPerView] = useState(1);
@@ -27,7 +34,8 @@ function App() {
   // Listen for viewport width changes
   useEffect(() => {
     console.log(projectsPerView);
-    if (viewportWidth >= 950) {
+    if (window.innerWidth >= 950) {
+      console.log("2 slides per view")
       if (projects.length >= 3) {
         setProjectsPerView(3);
         document.querySelector(".swiper").style.maxWidth = "1290px";
@@ -37,14 +45,14 @@ function App() {
         if (swiperSlide) {
         }
       }
-    } else if (viewportWidth >= 700) {
+    } else if (window.innerWidth >= 700) {
       if (projects.length >= 2) {
         setProjectsPerView(2);
       }
     } else {
       setProjectsPerView(1);
     }
-  }, [viewportWidth]);
+  }, [window.innerWidth]);
 
   // Listen for viewport height changes
   useEffect(() => {
