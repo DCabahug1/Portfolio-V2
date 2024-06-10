@@ -35,7 +35,7 @@ function App() {
   useEffect(() => {
     console.log(projectsPerView);
     if (window.innerWidth >= 950) {
-      console.log("2 slides per view")
+      console.log("2 slides per view");
       if (projects.length >= 3) {
         setProjectsPerView(3);
         document.querySelector(".swiper").style.maxWidth = "1290px";
@@ -201,11 +201,9 @@ function App() {
           <span>California State University, Northridge</span>, I bring a
           dynamic skill set including <span>proficiency</span> in{" "}
           <span>Java, JavaScript, React JS, HTML, CSS, LuaU, and Python.</span>{" "}
-          I am actively seeking <span>internships</span>
-          {" "}
-          to gain hands-on experience, apply my knowledge in{" "}
-          <span>real-world projects</span>, and contribute to impactful{" "}
-          <span>technological advancements</span>.
+          I am actively seeking <span>internships</span> to gain hands-on
+          experience, apply my knowledge in <span>real-world projects</span>,
+          and contribute to impactful <span>technological advancements</span>.
         </p>
         <div className="scroll-indicator" id="scroll-indicator-desktop">
           <img src="/assets/Scroll indicator.png" alt="" />
