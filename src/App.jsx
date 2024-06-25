@@ -10,6 +10,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import Project from "./components/Project";
+import LightBlob from "./components/LightBlob";
 
 function App() {
   const [projects, setProjects] = useState([
@@ -165,6 +166,7 @@ function App() {
 
   return (
     <div id="app">
+      <LightBlob />
       <div id="rotate-alert">
         <img src="/assets/RotateDevice.png" alt="" />
       </div>
