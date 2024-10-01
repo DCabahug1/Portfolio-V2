@@ -1,4 +1,4 @@
-# Duane Cabahug's Digital Portfolio
+# My Digital Portfolio
 
 Welcome to my digital portfolio! I'm Duane Cabahug, a front-end developer passionate about building intuitive and efficient web applications. Here, you can explore my work, projects, and experience in web development.
 
