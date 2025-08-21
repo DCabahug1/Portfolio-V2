@@ -15,16 +15,16 @@ import LightBlob from "./components/LightBlob";
 function App() {
   const [projects, setProjects] = useState([
     {
-      imgURL: "/assets/Project Imgs/DailyPlanner.png",
-      title: "To-Do List",
-      content: ["HTML", "CSS", "JavaScript", "React"],
-      projectURL: "https://dcabahug-to-do-list.netlify.app/",
-    },
-    {
       imgURL: "/assets/Project Imgs/ChatLink.png",
       title: "ChatLink",
       content: ["HTML", "CSS", "JavaScript", "React"],
       projectURL: "https://dcabahug1-chatlinkv2.netlify.app",
+    },
+    {
+      imgURL: "/assets/Project Imgs/DailyPlanner.png",
+      title: "To-Do List",
+      content: ["HTML", "CSS", "JavaScript", "React"],
+      projectURL: "https://dcabahug-to-do-list.netlify.app/",
     },
   ]);
 
@@ -199,18 +199,25 @@ function App() {
           <h2>Computer Science</h2>
         </div>
         <p id="intro-text">
-          As a <span> Computer Science major</span> at{" "}
+          As a <span>Computer Science major</span> at{" "}
           <span>California State University, Northridge</span>, I bring a
-          dynamic skill set including <span>proficiency</span> in{" "}
-          <span>Java, JavaScript, React JS, HTML, CSS, LuaU, and Python.</span>{" "}
-          I am actively seeking <span>internships</span> to gain hands-on
-          experience, apply my knowledge in <span>real-world projects</span>,
-          and contribute to impactful <span>technological advancements</span>.
+          versatile skill set including <span>Java</span>,{" "}
+          <span>JavaScript</span>, <span>React</span>, <span>HTML</span>,{" "}
+          <span>CSS</span>, <span>Python</span>, and <span>C++</span>. I have
+          hands-on experience with the{" "}
+          <span>MERN stack (MongoDB, Express, React, Node.js)</span> and tools
+          such as <span>Firebase</span>, <span>Tailwind</span>,{" "}
+          <span>ASP.NET</span>, and <span>Git/GitHub</span>. I am actively
+          seeking opportunities to apply my skills in{" "}
+          <span>software development</span> and{" "}
+          <span>information technology</span>, contributing to{" "}
+          <span>reliable, user-focused solutions</span>.
         </p>
         <div className="scroll-indicator" id="scroll-indicator-desktop">
           <img src="/assets/Scroll indicator.png" alt="" />
         </div>
       </div>
+      {/* Projects */}
       <div className="content-container" id="projects-container">
         <h2 id="projects-title">Projects</h2>
         <div id="swiper-container">
