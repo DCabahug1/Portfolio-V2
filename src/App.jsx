@@ -15,17 +15,24 @@ import LightBlob from "./components/LightBlob";
 function App() {
   const [projects, setProjects] = useState([
     {
+      imgURL: "/assets/Project Imgs/Weatherly.png",
+      title: "Weatherly",
+      content: ["HTML", "CSS", "JavaScript", "React", "Tailwind"],
+      projectURL: "https://dcabahug-to-do-list.netlify.app/",
+    },
+    {
       imgURL: "/assets/Project Imgs/ChatLink.png",
       title: "ChatLink",
-      content: ["HTML", "CSS", "JavaScript", "React"],
+      content: ["HTML", "CSS", "JavaScript", "React", "Firebase"],
       projectURL: "https://dcabahug1-chatlinkv2.netlify.app",
     },
     {
       imgURL: "/assets/Project Imgs/DailyPlanner.png",
       title: "To-Do List",
-      content: ["HTML", "CSS", "JavaScript", "React"],
+      content: ["HTML", "CSS", "JavaScript", "React", "Firebase"],
       projectURL: "https://dcabahug-to-do-list.netlify.app/",
     },
+    
   ]);
 
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
