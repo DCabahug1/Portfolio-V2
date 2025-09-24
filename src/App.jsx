@@ -18,7 +18,7 @@ function App() {
       imgURL: "/assets/Project Imgs/Weatherly.png",
       title: "Weatherly",
       content: ["HTML", "CSS", "JavaScript", "React", "Tailwind"],
-      projectURL: "https://dcabahug-to-do-list.netlify.app/",
+      projectURL: "https://dc-weatherly.vercel.app/",
     },
     {
       imgURL: "/assets/Project Imgs/ChatLink.png",
